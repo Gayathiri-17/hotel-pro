@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Hotel</title>
+    <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div id="top-nav">
+        <div id="menu-btn">☰</div>
+        <h2 class="logo">Perfect Hotel</h2>
+        <div id="nav-total-box">
+            Total: ₹<span id="nav-total">0</span>
+        </div>
+        <div id="cart-btn">🛒</div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#dishes">Dishes</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Cart Panel -->
+    <div id="cart-panel">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+
+        <div class="price-box">
+            <p>Subtotal: ₹<span id="subtotal">0</span></p>
+            <p>GST (18%): ₹<span id="gst">0</span></p>
+            <p>Discount (10%): ₹<span id="discount">0</span></p>
+            <h3>Grand Total: ₹<span id="grandtotal">0</span></h3>
+        </div>
+
+        <button id="clear-cart">Cancel Entire Order</button>
+    </div>
+
+    <!-- Banner -->
+    <section id="home" class="banner">
+        <h1 class="threeD">Welcome to Perfect Hotel</h1>
+        <p class="tagline">"Taste the perfection you deserve."</p>
+    </section>
+
+    <!-- Dishes Section -->
+    <section id="dishes" class="section">
+        <h2 class="main-title">Our Special Menu</h2>
+
+        <!-- Snacks -->
+        <h3 class="category-title">Snacks</h3>
+        <div class="dish-list">
+            <div class="dish" id="dish-French Fries">
+                <img src="images/french.jpg">
+                <h3>French Fries</h3>
+                <p>₹90</p>
+                <button class="add" onclick="addToCart('French Fries',90)">Add to Cart</button>
+                <button class="cancel-item" onclick="removeFromDish('French Fries')" style="display:none;">Cancel</button>
+            </div>
+
+            <div class="dish" id="dish-Chicken Wings">
+                <img src="images/wings.jpg">
+                <h3>Chicken Wings</h3>
+                <p>₹160</p>
+                <button class="add" onclick="addToCart('Chicken Wings',160)">Add to Cart</button>
+                <button class="cancel-item" onclick="removeFromDish('Chicken Wings')" style="display:none;">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Juices -->
+        <h3 class="category-title">Fresh Juices</h3>
+        <div class="dish-list">
+            <div class="dish" id="dish-Orange Juice">
+                <img src="images/orange.avif">
+                <h3>Orange Juice</h3>
+                <p>₹70</p>
+                <button class="add" onclick="addToCart('Orange Juice',70)">Add to Cart</button>
+                <button class="cancel-item" onclick="removeFromDish('Orange Juice')" style="display:none;">Cancel</button>
+            </div>
+
+            <div class="dish" id="dish-Mango Shake">
+                <img src="images/mango.jpg">
+                <h3>Mango Shake</h3>
+                <p>₹90</p>
+                <button class="add" onclick="addToCart('Mango Shake',90)">Add to Cart</button>
+                <button class="cancel-item" onclick="removeFromDish('Mango Shake')" style="display:none;">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Ice Creams -->
+        <h3 class="category-title">Ice Creams</h3>
+        <div class="dish-list">
+            <div class="dish" id="dish-Vanilla Ice Cream">
+                <img src="images/vennila.jpg">
+                <h3>Vanilla Ice Cream</h3>
+                <p>₹60</p>
+                <button class="add" onclick="addToCart('Vanilla Ice Cream',60)">Add to Cart</button>
+                <button class="cancel-item" onclick="removeFromDish('Vanilla Ice Cream')" style="display:none;">Cancel</button>
+            </div>
+
+            <div class="dish" id="dish-Chocolate Ice Cream">
+                <img src="images/choco.jpg">
+                <h3>Chocolate Ice Cream</h3>
+                <p>₹80</p>
+                <button class="add" onclick="addToCart('Chocolate Ice Cream',80)">Add to Cart</button>
+                <button class="cancel-item" onclick="removeFromDish('Chocolate Ice Cream')" style="display:none;">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Main Course -->
+        <h3 class="category-title">Main Course</h3>
+        <div class="dish-list">
+            <div class="dish" id="dish-Chicken Biryani">
+                <img src="images/biriyani.jpg">
+                <h3>Chicken Biryani</h3>
+                <p>₹180</p>
+                <button class="add" onclick="addToCart('Chicken Biryani',180)">Add to Cart</button>
+                <button class="cancel-item" onclick="removeFromDish('Chicken Biryani')" style="display:none;">Cancel</button>
+            </div>
+
+            <div class="dish" id="dish-Grilled Fish">
+                <img src="images/fish.jpg">
+                <h3>Grilled Fish</h3>
+                <p>₹250</p>
+                <button class="add" onclick="addToCart('Grilled Fish',250)">Add to Cart</button>
+                <button class="cancel-item" onclick="removeFromDish('Grilled Fish')" style="display:none;">Cancel</button>
+            </div>
+
+            <div class="dish" id="dish-Paneer Butter Masala">
+                <img src="images/panner.webp">
+                <h3>Paneer Butter Masala</h3>
+                <p>₹150</p>
+                <button class="add" onclick="addToCart('Paneer Butter Masala',150)">Add to Cart</button>
+                <button class="cancel-item" onclick="removeFromDish('Paneer Butter Masala')" style="display:none;">Cancel</button>
+            </div>
+
+            <div class="dish" id="dish-Veg Fried Rice">
+                <img src="images/veg.jpg">
+                <h3>Veg Fried Rice</h3>
+                <p>₹120</p>
+                <button class="add" onclick="addToCart('Veg Fried Rice',120)">Add to Cart</button>
+                <button class="cancel-item" onclick="removeFromDish('Veg Fried Rice')" style="display:none;">Cancel</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section dark">
+        <h2>About Us</h2>
+        <p>Welcome to <b>Royal Hotel</b> is known for serving fresh, delicious,
+             and hygienic food made with premium ingredients. We offer a wide variety of biryanis, snacks, juices, and desserts to satisfy every taste. Our team is dedicated to providing fast service and a comfortable dining experience. We aim to deliver the perfect blend of tradition, quality, and hospitality to every customer.</p>
+    </section>
+
+    <!-- Contact -->
+    <div id="contact">
+        <h2>📞 Contact Us</h2>
+        <p><b>Phone:</b> +91 98765 43210</p>
+        <p><b>Email:</b> royalhotel@gmail.com</p>
+        <p><b>Address:</b> MG Road, Chennai, India</p>
+    </div>
+
+    <script src="hotel.js"></script>
+</body>
+</html>

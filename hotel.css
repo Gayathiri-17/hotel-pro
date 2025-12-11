@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+}
+
+/* Top Navigation */
+#top-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 55px;
+    background: #e91e63;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+#menu-btn {
+    font-size: 26px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#cart-btn {
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.logo {
+    flex: 1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Total Bar inside nav */
+#nav-total-box {
+    background: #ffffff;
+    color: #e91e63;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-right: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* Sidebar Menu */
+#sidebar {
+    position: fixed;
+    top: 55px;
+    left: -220px;
+    width: 200px;
+    background: #333;
+    height: 100%;
+    padding-top: 20px;
+    transition: 0.4s;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    margin: 15px 0;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    background: #555;
+}
+
+/* Cart Panel */
+#cart-panel {
+    position: fixed;
+    right: -350px;
+    top: 55px;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: -3px 0 10px rgba(0,0,0,0.3);
+    transition: 0.4s;
+}
+
+.price-box {
+    background: #f7f7f7;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Banner */
+.banner {
+    height: 550px;
+    background: url("images/ban.webp");
+    background-size: auto;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding-top: 120px;
+    margin-top: 55px;
+}
+
+.threeD {
+    font-size: 42px;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px black;
+}
+
+.tagline {
+    font-size: 20px;
+}
+
+/* Dishes */
+.section {
+    padding: 40px 20px;
+}
+
+.main-title {
+    font-size: 38px;
+    color: #e91e63;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.category-title {
+    font-size: 26px;
+    color: #ff2f72;
+    margin: 30px 0 10px;
+}
+
+.dish-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.dish {
+    width: 220px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.dish:hover {
+    transform: translateY(-8px);
+}
+
+.dish img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.dish button {
+    background: #e91e63;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.dish button:hover {
+    background: #c2185b;
+}
+
+/* Footer Sections */
+.section.dark {
+    background: #222;
+    color: white;
+}
+.cancel-item {
+    background: #d32f2f;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add {
+    background: #111;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
